@@ -1,10 +1,8 @@
 <?php
 
-echo "Letakan file didalam folder [file] \n";
-
 echo "nama file: \n";
 
-echo "example: dist.zip \n";
+echo "example: C:\\Users\dist.zip \n";
 
 $file = trim(fgets(STDIN));
 
@@ -19,6 +17,10 @@ echo "Server Direktory: \n";
 echo "example: :/home/ucup \n";
 
 $serverdir = trim(fgets(STDIN));
+
+echo "scp ". $file . " " . $userhost . $serverdir;
+
+echo "\n";
 
 echo shell_exec("scp ". $file . " " . $userhost . $serverdir);
 
